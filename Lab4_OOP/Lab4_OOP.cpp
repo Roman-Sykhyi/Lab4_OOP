@@ -52,11 +52,13 @@ void main()
         Newspaper("День", 25, 0.19f, 1120, 2),
     };
 
-    PrintPaperUsed(newspapers, sizeof(newspapers) / sizeof(Newspaper));
+    int count = sizeof(newspapers) / sizeof(Newspaper);
 
-    SortByPaperUsed(newspapers, sizeof(newspapers) / sizeof(Newspaper));
+    PrintPaperUsed(newspapers, count);
+
+    SortByPaperUsed(newspapers, count);
     puts("\nВідсортований список:");
-    PrintPaperUsed(newspapers, sizeof(newspapers) / sizeof(Newspaper));
+    PrintPaperUsed(newspapers, count);
 
     system("pause");
 }
